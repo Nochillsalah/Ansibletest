@@ -1,0 +1,7 @@
+---
+- name: Uninstall k3s
+  become: yes
+  hosts: "oussama1"
+  tasks:
+    - name: execute the uninstall script
+      shell: /usr/local/bin/k3s-agent-uninstall.sh
