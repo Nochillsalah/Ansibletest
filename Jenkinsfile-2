@@ -2,7 +2,9 @@ pipeline{
     agent any
     stages{
         stage('Exec ansible install worker'){
-            ansiblePlaybook become: true, becomeUser: 'pi', credentialsId: '08d5b924-1915-42ff-9d5b-3b3edeac4009', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'installworkerk3s.yaml'
+            steps{
+             ansiblePlaybook become: true, becomeUser: 'pi', credentialsId: '08d5b924-1915-42ff-9d5b-3b3edeac4009', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'installworkerk3s.yaml'   
+            }
         }
     }
 }
