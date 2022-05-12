@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Exec ansible install worker'){
             steps{
-             ansiblePlaybook become: true, becomeUser: 'jenkins', credentialsId: 'jenkins-key', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'installworkerk3s.yaml'   
+             ansiblePlaybook become: true, becomeUser: 'jenkins', credentialsId: 'jenkins-key', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'installworkerk3s.yaml' , extras: '-vvv'  
             }
         }
     }
