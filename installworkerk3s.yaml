@@ -6,13 +6,13 @@
     - name: download the script
       get_url:
         url: https://get.k3s.io
-        dest: /home/pi/installk3s.sh
+        dest: /home/jenkins/installk3s.sh
 
     - name: permission for the shell
-      command: chmod +x /home/pi/installk3s.sh
+      command: chmod +x /home/jenkins/installk3s.sh
 
     - name: execute the script
-      shell: /home/pi/installk3s.sh
+      shell: /home/jenkins/installk3s.sh
       environment:
         K3S_URL: https://172.16.84.11:6443
         K3S_TOKEN: K1088c1d79619492ef4033690282ba4951646236673bc99b072d216d8514f21e15c::server:e93aea10368dfa167ac46a1868774d2d
